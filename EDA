@@ -1,0 +1,23 @@
+import pandas as pd
+df=pd.read.csv('')
+print(df)
+
+df.head()
+
+df.info()
+
+df.describe()
+
+df.shape
+
+df.isnull().sum()
+
+data=df.drop_duplicates(subset="col_name")
+
+df.value_counts(subset="col_name")
+
+import seaborn as sb
+import matplotlib.pyplot as plt
+sb.countplot(x="col_name",data=df)
+plt.xticks(rotation=90)
+plt.show()
