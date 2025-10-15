@@ -1,0 +1,24 @@
+db.employee.insertMany([
+{name:"fatima",dept:"HR",salary:9000},
+{name:"asma",dept:"accounts",salary:5000},
+{name:"aamina",dept:"HR",salary:10000},
+{name:"sifat",dept:"finance",salary:6000},
+{name:"tayyab",dept:"HR",salary:4000},
+{name:"tausif",dept:"accounts",salary:8000}
+])
+
+4) var map=function(){
+emit(this.dept,this.salary);
+};
+
+5) var reduce=function(keyDept,valuesSalary){
+return Array.sum(valuesSalary);
+};
+
+6) db.employee.mapReduce(
+map,
+reduce,
+{out:"dept_total_salary"}
+)
+
+7) db.dept_total_salary.find().pretty()
