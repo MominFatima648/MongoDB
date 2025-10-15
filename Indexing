@@ -1,0 +1,16 @@
+db.student.insertMany([
+{name:"fatima",dept:"HR",salary:9000,marks:90},
+{name:"asma",dept:"accounts",salary:5000,marks:80},
+{name:"aamina",dept:"HR",salary:10000,marks:89},
+{name:"sifat",dept:"finance",salary:6000,marks:78},
+{name:"tayyab",dept:"HR",salary:4000,marks:82},
+{name:"tausif",dept:"accounts",salary:8000,marks:55}
+])
+
+4) db.student.find({name:"fatima"}).explain("executionStats")
+
+5) db.student.createIndex({name:1})
+
+6) same as 4
+
+7) db.student.getIndexes()
