@@ -1,0 +1,3 @@
+mongod -port 20002 --replSet r2 --bind_ip localhost --dbpath C:\server\server2
+
+mongo -port 20000 ------(primary,secondary node)
